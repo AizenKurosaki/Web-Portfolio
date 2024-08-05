@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css"> 
+      <title>Izeal's Page</title>
+   </head>
+   <body>
+      <!--Navigation bar at the top of the page-->
+      <nav>
+         <h1>Izeal's World</h1>
+      </nav>
+      <img src="Robin.jpg" alt="Profile Image" id="logoIMG">
+
+      <!--Middle three column section-->
+      <div class="row" style="clear: right;">
+         <div class="column tab-links" style="background-color: rgb(165, 89, 42);" onclick="expandSection('a-info')"> 
+            <h2 id="about-heading">Get to Know Me</h2>
+            <div id="a-info" class="tab-contents">  
+               <p>My name is Izeal Langford I was born and raised in Baltimore, Maryland I'm an only child & I'm interested in sports and gaming.
+                  When I was younger, I was on the swim team. I was a member of the swim team for eight years
+                   & played sports in school. My favorite school subject is Math.
+                    I'm known to be extremely excitable.
+                    I like to play video games such as NBA 2K, WWE & FIFA. 
+                    My favorite car is a Dodge Charger SRT Hellcat.
+                     I also like Anime. I enjoy the storylines and intense battles.
+                     My favorite anime is Naruto.
+                     I played the violin for five years & the saxophone for two years. 
+                     My favorite sport is basketball & my favorite player is Steph Curry.
+                  </p>
+            </div>
+         </div>
+         <div class="column tab-links" style="background-color:darkslategray;" onclick="expandSection('e-info')">
+            <h2 id="experience-heading">My Experience</h2>
+            <div id="e-info" class="tab-contents">
+               <p>When I first heard about The Hidden Genuis Project, I thought it would be boring & I didn't want to do it.
+                  When my grandmother told me about it, it seemed as if I would do more work outside of school. At Interview Day, I met the other geniuses.
+                  I didn't think I'd like them because they were a little loud & a bit annoying.
+                  Since being in the program, I've gotten to know them & we're all pretty cool. When I discovered The Hidden Genius Project would out give us food, money & a MacBook, I was hyped!
+                  The work has been pretty easy since I began understanding it.</p> 
+            </div>
+         </div>
+         <div class="column tab-links" style="background-color: aqua;" onclick="expandSection('g-info')">
+            <h2 id="goals-heading" >Goals</h2>
+            <div id="g-info" class="tab-contents">
+               <p>My goals are to get good grades in highschool,
+                  get into a good college & play sports. When I'm older, I want to get a good job or be a professional athlete.
+                   I look forward to getting my own place & getting a car when I'm older as well.
+                 I want to have have a solid career that will ensure financial stability so that I can affdord my lifestyle.</p>        
+            </div>
+         </div>
+      </div>
+
+      <!--About Me Gallery-->
+      <div id="bg-block">
+         <div id="gallery-box" style="clear: left;">
+            <h1 id="gallery-heading">Gallery</h1>
+         </div>
+         <div id="gallery-block">
+            <div class="gallery">
+               <img src="naruto.jpeg" alt="naruto" id="naruto" class="galleryIMG">
+               <!--<div class="gallery-desc">
+                  My favorite  Anime is "Naruto" because of its animaton.
+                  Naruto has some of the best fights like rock lee vs gaara.
+                  I don't like how the show has so many filler episodes, but they have good storylines, but most of the side characters be dyeing.
+                  In my opinion naruto has good character development.
+               </div>-->
+            </div>
+            
+   
+            <div class="gallery">
+               <img src="swimming.jpeg" alt="swimming" id="swimming" class="galleryIMG">
+               <!--<div class="gallery-desc">
+                  I started swimming at 4 years old because my mom didn't want me to drown if I ever go to the pool or beach.
+                  I swam for 8 years and I won medals at swim meets. Igot tired of swiimming so I stopped
+               </div>-->
+            </div>
+         
+            <div class="gallery">
+               <img src="4k-anime-498-x-241-gif-kpnnk8elfpjxlmze.gif" alt="gojo" id="gojo" class="galleryIMG">
+            </div>
+   
+         </div>
+      </div>
+      <!--End of About Me Gallery-->
+      <div id="bg-block">
+         <div id="gallery-box" style="clear: left;">
+            <h1 id="gallery-heading">Projects</h1>
+         </div>
+         <div id="gallery-block">
+         <div id="Portfolio" style="clear: left;">
+            <div class="gallery">
+            <a href=""><img src="rock paper scissors.png" alt="Rock Paper Scissors"></a>
+            </div>
+            <div>
+               <div class="gallery">
+            <a href="https://github.com/AizenKurosaki/Python-Projects/blob/main/temperature_converter.py"><img src="temperature-converter-facebook.jpg.webp"  alt="Temperature Converter"></a>
+               </div>
+            </div>
+         </div>
+         </div>
+      </div>
+      </body>
+
+      <script>
+         var tablinks=document.getElementsByClassName("tab-links")
+         var tabcontents=document.getElementsByClassName("tab-contents")
+
+         function expandSection(tabname){
+            for (tablink of tablinks){
+               tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+               tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+         }
+      </script>
+   </body>
+</html>     
